@@ -18,7 +18,7 @@ cd "$HOME/$NVALT_DIR" || exit
 # It combines results from a filename search and a content search.
 candidates_cmd="(rg --files | $FUZZY --filter \"{}\" & rg -S -l \"{}\") | uniq"
 
-$FUZZY \
+sk \
     --ansi \
     -i \
     -c "$candidates_cmd" \

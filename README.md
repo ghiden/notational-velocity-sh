@@ -1,21 +1,25 @@
 # Notational Velocity in Shell
 
 This script provides a simple command-line interface for managing notes, inspired by originally [Notational Velocity](https://notational.net/), and later [nvalt](https://brettterpstra.com/projects/nvalt/).
-But both of them are not in development anymore, so I sometimes search for alternatives. Then I found this vim extension [notational-fzf-vim](https://github.com/alok/notational-fzf-vim) but it wasn't quite right from how I wanted. Then I found this [issue]()https://github.com/alok/notational-fzf-vim/issues/22) in the project which nearly almost fitted my needs.
-So this project is just shell script that I adjusted to fit my needs.
+
+Both apps are not in development anymore, so I sometimes search for alternatives. Then I found this vim extension [notational-fzf-vim](https://github.com/alok/notational-fzf-vim) but it wasn't quite right from how I wanted.
+As part of my trial, I found this [issue]()https://github.com/alok/notational-fzf-vim/issues/22) in the project which was nearly almost perfect for my needs.
+
+So this project is just a shell script that I adjusted to fit my needs.
 
 ## Features
 
 - Fuzzy search for note filenames.
 - Content-based search for notes.
 - Create new notes with a specified query.
-- Open notes in your preferred editor.
+- Open notes in your preferred Vi-based editor.
 
 ## Prerequisites
 
-- [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder.
-- [ripgrep](https://github.com/BurntSushi/ripgrep): A fast, recursive search tool.
-- [skim](https://github.com/skim-rs/skim): Fuzzy Finder in rust!
+- [skim](https://github.com/skim-rs/skim): base UI and/or for fuzzy finder
+- [fzf](https://github.com/junegunn/fzf): fuzzy finder
+- [fzf.vim](https://github.com/junegunn/fzf.vim): preview
+- [ripgrep](https://github.com/BurntSushi/ripgrep): content search
 
 ## Installation
 
@@ -34,7 +38,7 @@ So this project is just shell script that I adjusted to fit my needs.
 
 3.  **Customize the script.**
 
-    Open `nvalt.sh` in your editor and set the `NVALT_DIR` variable to the directory where you want to store your notes. You can also change the `EDITOR` variable to your preferred text editor.
+    Open `nvalt.sh` in your editor and set the `NVALT_DIR` variable to the directory where you want to store your notes. You can also change the `EDITOR` variable to your preferred vi text editor.
 
     ```bash
     # config
@@ -60,7 +64,7 @@ To use the script, run the following command in your terminal:
 nvalt
 ```
 
-This will open an interactive fuzzy search interface powered by `fzf`.
+This will open an interactive fuzzy search interface powered by `skim`.
 
 ### Searching for Notes
 
