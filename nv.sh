@@ -7,12 +7,12 @@
 # ctrl-n: open new file with QUERY_STRING.txt
 
 # config
-NVALT_DIR=YOUR_NVALT_DIR
+NV_DIR=YOUR_NV_DIR
 EDITOR=nvim
 # FUZZY can be 'fzf' or 'sk'
 FUZZY=fzf
 
-cd "$HOME/$NVALT_DIR" || exit
+cd "$HOME/$NV_DIR" || exit
 
 # The command to generate the list of candidates.
 # It combines results from a filename search and a content search.

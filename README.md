@@ -33,16 +33,16 @@ So this project is just a shell script that I adjusted to fit my needs.
 2.  **Make the script executable.**
 
     ```bash
-    chmod +x nvalt.sh
+    chmod +x nv.sh
     ```
 
 3.  **Customize the script.**
 
-    Open `nvalt.sh` in your editor and set the `NVALT_DIR` variable to the directory where you want to store your notes. You can also change the `EDITOR` variable to your preferred vi text editor.
+    Open `nv.sh` in your editor and set the `NV_DIR` variable to the directory where you want to store your notes. You can also change the `EDITOR` variable to your preferred vi text editor.
 
     ```bash
     # config
-    NVALT_DIR="YOUR_NVALT_DIR"
+    NV_DIR="YOUR_NV_DIR"
     EDITOR="nvim"
     # FUZZY can be 'fzf' or 'skim'
     FUZZY="fzf"
@@ -50,10 +50,10 @@ So this project is just a shell script that I adjusted to fit my needs.
 
 4.  **Place the script in your `PATH`.**
 
-    Move the `nvalt.sh` script to a directory in your system's `PATH` (e.g., `/usr/local/bin`) to make it accessible from anywhere in the terminal.
+    Move the `nv.sh` script to a directory in your system's `PATH` (e.g., `/usr/local/bin`) to make it accessible from anywhere in the terminal.
 
     ```bash
-    sudo mv nvalt.sh /usr/local/bin/nvalt
+    sudo mv nv.sh /usr/local/bin/nv
     ```
 
 ## Usage
@@ -61,7 +61,7 @@ So this project is just a shell script that I adjusted to fit my needs.
 To use the script, run the following command in your terminal:
 
 ```bash
-nvalt
+nv
 ```
 
 This will open an interactive fuzzy search interface powered by `skim`.
